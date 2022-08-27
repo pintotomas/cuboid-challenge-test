@@ -58,8 +58,7 @@ var _ = Describe("Cuboid", func() {
 			expectedVol: 27,
 		},
 	}
-	for key, v := range cuboids {
-		value := v
+	for key, value := range cuboids {
 		Describe(fmt.Sprintf("with %s", key), func() {
 			It(fmt.Sprintf("Has %v volume", value.expectedVol), func() {
 				Expect(value.Cuboid.PayloadVolume()).To(Equal(value.expectedVol))
